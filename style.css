@@ -1,0 +1,109 @@
+/* ============================= */
+/* Fuentes y reset básico */
+/* ============================= */
+@import url("https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Protest Riot", sans-serif;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Fondo principal */
+  background-image: url('back.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* ============================= */
+/* Canvas de corazones */
+/* ============================= */
+canvas#heart {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0; /* Debajo del cuadro de diálogo */
+}
+
+/* ============================= */
+/* Cuadro de diálogo central */
+/* ============================= */
+.cuadro-dialogo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px 40px;
+  border-radius: 15px;
+  text-align: center;
+  z-index: 1; /* Encima del canvas */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  min-width: 300px;
+}
+
+/* ============================= */
+/* Título y párrafo */
+/* ============================= */
+.cuadro-dialogo h1 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #ff4d6d; /* Rosa amor */
+}
+
+.cuadro-dialogo p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* ============================= */
+/* Botones */
+/* ============================= */
+.cuadro-dialogo .buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.cuadro-dialogo button {
+  font-family: "Protest Riot", sans-serif;
+  font-size: 1.1rem;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+
+/* Botón Sí */
+#btnSi {
+  background-color: #ff4d6d;
+  color: white;
+}
+
+#btnSi:hover {
+  transform: scale(1.1);
+  background-color: #ff3a57;
+}
+
+/* Botón No */
+#btnNo {
+  background-color: #aaa;
+  color: white;
+}
+
+#btnNo:hover {
+  background-color: #888;
+}
