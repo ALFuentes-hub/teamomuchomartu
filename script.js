@@ -17,7 +17,7 @@ btnSi.addEventListener("click", function () {
   // Mensaje SweetAlert
   Swal.fire({
     position: "top-center",
-    title: "Soy el hombre más feliz del mundo, gracias por la oportunidad, no te decepcionaré🥰",
+    title: "Gracias por la oportunidad, soy el hombre mas feliz del mundo, no te decepcionaré🥰",
     showConfirmButton: false,
     timer: 1500,
   });
@@ -39,7 +39,7 @@ btnNo.addEventListener("mouseover", function () {
   this.style.transform = `translate(${nuevaX}px, ${nuevaY}px)`;
 });
 
-// Opcional: click en "No" muestra meme
+// Click en "No" muestra meme
 btnNo.addEventListener("click", function () {
   Swal.fire({
     imageUrl: "https://trneodavo.000webhostapp.com/meme/meme%20salvador.png",
@@ -127,8 +127,8 @@ function initHearts() {
     pulse((1 + n) * 0.5, (1 + n) * 0.5);
     time += (Math.sin(time) < 0 ? 9 : n > 0.8 ? 0.2 : 1) * config.timeDelta;
 
-    ctx.fillStyle = "rgba(0,0,0,.1)";
-    ctx.fillRect(0, 0, width, height);
+    // Limpiar el canvas para mantener el fondo original
+    ctx.clearRect(0, 0, width, height);
 
     for (let i = e.length; i--;) {
       const u = e[i];
